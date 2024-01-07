@@ -1,0 +1,3 @@
+[submodule "src/themes/theme"]
+	path = src/themes/theme
+	url = https://github.com/loicpetit/blog-theme.git
