@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>New Hugo blog | My New Hugo Site</title>
+
+      <link rel="stylesheet" href="/blog/css/main.min.73be4799b2091d293b47b52ca2642fe82aa2b1c9c050e8d1b389a80939a30dd4.css" integrity="sha256-c75HmbIJHSk7R7UsomQv6CqiscnAUOjRs4moCTmjDdQ=" crossorigin="anonymous">
+
+
+      <script src="/blog/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+  <header>
+    <h1>My New Hugo Site</h1>
+
+  <nav>
+    <ul>
+    <li>
+      <a href="/blog/">Home</a>
+    </li>
+    <li>
+      <a aria-current="true" class="ancestor" href="/blog/posts/">Posts</a>
+    </li>
+    <li>
+      <a href="/blog/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+  </header>
+  <main>
+    
+  <h1>New Hugo blog</h1>
+
+  
+  
+  <time datetime="2024-01-07T14:14:31-05:00">January 7, 2024</time>
+
+  <p>Hello there, my first posts on this blog will be how I created the blog using Hugo.<br>
+Below are the step to initiate the blog.</p>
+<h2 id="official-documentation">Official documentation</h2>
+<p>Here the <a href="https://gohugo.io/getting-started/quick-start">link</a> to the quick start to create a blog with Hugo.</p>
+<h2 id="custom-theme">Custom theme</h2>
+<p>First of all to display something in Hugo you need a theme.
+I don&rsquo;t want to reuse an existing theme but learn how to create by doing my own blog.
+So first let&rsquo;s create a custom blog theme!</p>
+<ul>
+<li>Open a command line tool</li>
+<li>Go in a folder where you want to create your theme</li>
+<li>Execute the following command
+<code>hugo new theme .</code><br>
+A <strong>themes</strong> folder will be created containing all the elements for a fresh theme</li>
+<li><em>Optional : rename the folder with your theme name</em></li>
+<li>If you don&rsquo;t want default content in your theme, remove the sub folder <strong>content</strong></li>
+<li>Initialize a git repository inside the theme (at the README level) and publish your repository
+<pre tabindex="0"><code>git init
+git remote add origin ...
+git add .
+git commit -m &#39;init&#39;
+git push ...
+</code></pre></li>
+</ul>
+<h2 id="new-site">New site</h2>
+<p>We now have a custom theme available, let&rsquo;s use it in our blog!</p>
+<ul>
+<li>In a command line tool</li>
+<li>Go in a folder where you want to create your blog sources</li>
+<li>Execute the following command
+<code>hugo new site mysite</code><br>
+A <strong>mysite</strong> folder will be created containing all the elements for a new site, except the theme</li>
+<li>Move inside the <strong>mysite</strong> folder</li>
+<li>Init git<br>
+<code>git init</code></li>
+<li>Add the theme with the following command<br>
+<code>git submodule add THEME_REPOSITORY_URL themes/THEME_NAME</code><br>
+where we replace THEME_REPOSITORY_URL and THEME_NAME by their value, example :<br>
+<code>git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke</code></li>
+<li>Add theme in the <strong>hugo.toml</strong> file by adding<br>
+<code>theme = 'THEME_NAME'</code></li>
+</ul>
+<h2 id="test-it-locally">Test it locally</h2>
+<p>The site is ready, let&rsquo;s test it!</p>
+<ul>
+<li>In a command line tool</li>
+<li>Go in the blog folder and execute<br>
+<code>hugo server --buildDrafts</code></li>
+</ul>
+<h2 id="add-a-first-post">Add a first post</h2>
+<p>While the <code>hugo server</code> commqnd run, we can create new content and have a fast feedback on what we create.</p>
+<ul>
+<li>Open another command line tool</li>
+<li>Go in the blog folder</li>
+<li>Create the folder <strong>posts</strong> in <strong>content</strong></li>
+<li>Then from from the source root, create a new post with the command<br>
+<code>hugo new content posts/first-post.md</code><br>
+<em>Do not forget the filename extension!</em><br>
+The post should be visible in the local web site</li>
+</ul>
+<h2 id="publish-a-post">Publish a post</h2>
+<p>By default the created contents is in draft status. When your content is ready set the draft property to false in order to to have it visible in the production build (without <em>&ndash;buildDrafts</em>).</p>
+<p>Set the first post draft property to false the run hugo server without <em>&ndash;buildDrafts</em> to check the post is visible.</p>
+<h2 id="host-it-on-github">Host it on Github</h2>
+<p>To start hosting the blog, the easier is to use <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">GitHub Pages</a>.</p>
+<ul>
+<li>In a command line tool</li>
+<li>Go in a folder where you want to create your blog sources</li>
+<li>Run the following command to generate the static files in the <strong>docs</strong> folder<br>
+<code>hugo -d docs</code></li>
+<li>Commit files in the <em>mysite</em> repository and push the changes in Github</li>
+<li>Connect to Github and open the settings of the <em>mysite</em> repository</li>
+<li>In the left menu access the <strong>Pages</strong> item</li>
+<li>Source : keep <em>Deploy from branch</em><br>
+Select the <strong>main</strong> branch and the <strong>docs</strong> folder</li>
+<li>Save and refresh the page<br>
+The link of the site should be visible now</li>
+</ul>
+<p>We will explain how to host it in a custom domain and on something else in a later post.</p>
+<p><em>Remark: if your repository is not the <strong><!-- raw HTML omitted -->.github.io</strong> repository, you may need to change the <strong>baseURL</strong> property in <strong>hugo.toml</strong> in order to the links to work correctly.</em></p>
+<h2 id="automatize-publication-with-a-git-hook">Automatize publication with a git hook</h2>
+<p>Now the blog is host in the repository, we can assure it is always the last version published by using a git hook to generate the static files of the blog.</p>
+<p>TODO when working</p>
+
+  
+
+
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+</body>
+</html>
