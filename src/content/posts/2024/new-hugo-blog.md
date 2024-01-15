@@ -96,6 +96,7 @@ To start hosting the blog, the easier is to use [GitHub Pages](https://docs.gith
 
 We will explain how to host it in a custom domain and on something else in a later post.
 
+*Remark: if your repository is not the **<user>.github.io** repository, you may need to change the **baseURL** property in **hugo.toml** in order to the links to work correctly.*
 
 ## Automatize publication with a git hook
 
