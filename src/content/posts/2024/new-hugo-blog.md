@@ -84,13 +84,13 @@ To start hosting the blog, the easier is to use [GitHub Pages](https://docs.gith
 
 * In a command line tool
 * Go in a folder where you want to create your blog sources
-* Run the following command to generate the static files in the **dist** folder  
-  `hugo -d dist`
+* Run the following command to generate the static files in the **docs** folder  
+  `hugo -d docs`
 * Commit files in the *mysite* repository and push the changes in Github
 * Connect to Github and open the settings of the *mysite* repository
 * In the left menu access the **Pages** item
 * Source : keep *Deploy from branch*  
-  Select the **main** branch and the **dist** folder
+  Select the **main** branch and the **docs** folder
 * Save and refresh the page  
   The link of the site should be visible now
 
