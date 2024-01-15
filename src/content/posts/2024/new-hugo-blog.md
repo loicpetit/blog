@@ -102,4 +102,4 @@ We will explain how to host it in a custom domain and on something else in a lat
 
 Now the blog is host in the repository, we can assure it is always the last version published by using a git hook to generate the static files of the blog.
 
-TODO
+TODO when working
