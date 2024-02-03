@@ -13,7 +13,7 @@
       <link>https://loicpetit.github.io/blog/posts/2024/new-hugo-blog/</link>
       <pubDate>Sun, 07 Jan 2024 14:14:31 -0500</pubDate>
       <guid>https://loicpetit.github.io/blog/posts/2024/new-hugo-blog/</guid>
-      <description>Hello there, my first posts on this blog will be how I created the blog using Hugo.&#xA;Below are the step to initiate the blog.&#xA;Official documentation Here the link to the quick start to create a blog with Hugo.&#xA;Custom theme First of all to display something in Hugo you need a theme. I don&amp;rsquo;t want to reuse an existing theme but learn how to create by doing my own blog.</description>
+      <description>Hello there, my first posts on this blog will be how I created the blog using Hugo.&#xA;Below are the step to initiate the blog.&#xA;Official documentation Here the link to the quick start to create a blog with Hugo.&#xA;Custom theme First of all, to display something in Hugo you need a theme. I don&amp;rsquo;t want to reuse an existing theme but learn how to create one by doing my own blog.</description>
     </item>
   </channel>
 </rss>

@@ -13,8 +13,8 @@ Here the [link](https://gohugo.io/getting-started/quick-start) to the quick star
 
 ## Custom theme
 
-First of all to display something in Hugo you need a theme.
-I don't want to reuse an existing theme but learn how to create by doing my own blog.
+First of all, to display something in Hugo you need a theme.
+I don't want to reuse an existing theme but learn how to create one by doing my own blog.
 So first let's create a custom blog theme!
 
 * Open a command line tool
@@ -62,7 +62,7 @@ The site is ready, let's test it!
 
 ## Add a first post
 
-While the `hugo server` commqnd run, we can create new content and have a fast feedback on what we create.
+While the `hugo server` command run, we can create new content and have a fast feedback on what we create.
 
 * Open another command line tool
 * Go in the blog folder
@@ -76,7 +76,7 @@ While the `hugo server` commqnd run, we can create new content and have a fast f
 
 By default the created contents is in draft status. When your content is ready set the draft property to false in order to to have it visible in the production build (without *--buildDrafts*).
 
-Set the first post draft property to false the run hugo server without *--buildDrafts* to check the post is visible.
+Set the first post draft property to false then run hugo server without *--buildDrafts* to check the post is visible.
 
 ## Host it on Github
 
