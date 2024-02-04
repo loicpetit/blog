@@ -1,8 +1,15 @@
-+++
-title = 'New Hugo blog'
-date = 2024-01-07T14:14:31-05:00
-draft = false
-+++
+---
+title: New Hugo blog
+date: 2024-01-07T00:00:00Z
+draft: false
+categories:
+- Development
+tags:
+- Hugo
+- Blog
+series: Hugo blog
+series_weight: 1
+---
 
 Hello there, my first posts on this blog will be how I created the blog using Hugo.  
 Below are the step to initiate the blog.

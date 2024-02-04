@@ -1,0 +1,28 @@
+baseURL: https://loicpetit.github.io/blog/
+languageCode: en-us
+title: Dev adventures
+theme: theme
+cleanDestinationDir: true
+
+taxonomies:
+  category: categories
+  serie: series
+  tag: tags
+
+menus:
+  main:
+  - name: Home
+    pageRef: /
+    weight: 10
+  - name: Posts
+    pageRef: /posts
+    weight: 20
+  - name: Series
+    pageRef: /series
+    weight: 30
+  - name: Categories
+    pageRef: /categories
+    weight: 40
+  - name: Tags
+    pageRef: /tags
+    weight: 50
