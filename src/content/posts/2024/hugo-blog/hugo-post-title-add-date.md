@@ -1,6 +1,6 @@
 ---
 title: Add post date in Hugo list pages
-date: 2024-02-04T00:00:00Z # to update !
+date: 2024-02-10T00:00:00Z # to update !
 draft: true
 categories:
 - Development
