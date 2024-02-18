@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Development on Dev adventures</title>
+    <title>Development on Hello there!</title>
     <link>https://loicpetit.github.io/blog/categories/development/</link>
-    <description>Recent content in Development on Dev adventures</description>
+    <description>Recent content in Development on Hello there!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 03 Feb 2024 00:00:00 +0000</lastBuildDate>
@@ -13,14 +13,14 @@
       <link>https://loicpetit.github.io/blog/posts/2024/hugo-blog/hugo-taxonomy/</link>
       <pubDate>Sat, 03 Feb 2024 00:00:00 +0000</pubDate>
       <guid>https://loicpetit.github.io/blog/posts/2024/hugo-blog/hugo-taxonomy/</guid>
-      <description>Hello there, today we will check how categorize and relate our content with Hugo Taxonomy.&#xA;Official documentation https://gohugo.io/content-management/taxonomies&#xA;What I want I would like to tags my posts based on subjects and technologies discussed.&#xA;I already know I will do blog series and I would like a way to group posts of the same serie together.&#xA;First, tags ! Hugo uses the concept of front matter to add metadata of content.</description>
+      <description>Hello there! Today we will check how categorize and relate our content with Hugo Taxonomy.&#xA;Official documentation https://gohugo.io/content-management/taxonomies&#xA;What I want I would like to tags my posts based on subjects and technologies discussed.&#xA;I already know I will do blog series and I would like a way to group posts of the same serie together.&#xA;First, tags ! Hugo uses the concept of front matter to add metadata of content.</description>
     </item>
     <item>
       <title>New Hugo blog</title>
       <link>https://loicpetit.github.io/blog/posts/2024/hugo-blog/new-hugo-blog/</link>
       <pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate>
       <guid>https://loicpetit.github.io/blog/posts/2024/hugo-blog/new-hugo-blog/</guid>
-      <description>Hello there, my first posts on this blog will be how I created the blog using Hugo.&#xA;Below are the step to initiate the blog.&#xA;Official documentation Here the link to the quick start to create a blog with Hugo.&#xA;Custom theme First of all, to display something in Hugo you need a theme. I don&amp;rsquo;t want to reuse an existing theme but learn how to create one by doing my own blog.</description>
+      <description>Hello there! My first posts on this blog will be how I created the blog using Hugo.&#xA;Below are the step to initiate the blog.&#xA;Official documentation Here the link to the quick start to create a blog with Hugo.&#xA;Custom theme First of all, to display something in Hugo you need a theme. I don&amp;rsquo;t want to reuse an existing theme but learn how to create one by doing my own blog.</description>
     </item>
   </channel>
 </rss>

@@ -11,7 +11,7 @@ series: Hugo blog
 series_weight: 2
 ---
 
-Hello there, today we will check how categorize and relate our content with Hugo Taxonomy.
+Hello there! Today we will check how categorize and relate our content with Hugo Taxonomy.
 
 ## Official documentation
 

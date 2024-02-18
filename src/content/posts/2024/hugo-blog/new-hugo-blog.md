@@ -11,7 +11,7 @@ series: Hugo blog
 series_weight: 1
 ---
 
-Hello there, my first posts on this blog will be how I created the blog using Hugo.  
+Hello there! My first posts on this blog will be how I created the blog using Hugo.  
 Below are the step to initiate the blog.
 
 ## Official documentation
