@@ -6,8 +6,15 @@
     <description>Recent content in Development on Hello there!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Feb 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://loicpetit.github.io/blog/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Display serie and category in Hugo posts</title>
+      <link>https://loicpetit.github.io/blog/posts/2024/hugo-blog/hugo-display-category-and-serie/</link>
+      <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://loicpetit.github.io/blog/posts/2024/hugo-blog/hugo-display-category-and-serie/</guid>
+      <description>Hello there! Today we will see how customize our post pages.&#xA;By default the tags are displayed, but I would like to see the category and the serie as well.&#xA;How it works Hugo use templates to render the website, see https://gohugo.io/templates/&#xA;The two main templates are single page and list page : a post is a single page but the post section is a list page, it will render a list of content.</description>
+    </item>
     <item>
       <title>Hugo Taxonomy</title>
       <link>https://loicpetit.github.io/blog/posts/2024/hugo-blog/hugo-taxonomy/</link>

@@ -1,7 +1,7 @@
 ---
 title: Display serie and category in Hugo posts
-date: 2024-02-05T00:00:00Z
-draft: true
+date: 2024-02-18T00:00:00Z
+draft: false
 categories: Development
 tags:
 - Hugo
