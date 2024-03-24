@@ -9,6 +9,7 @@ tags:
 - Blog
 series: Hugo blog
 series_weight: 2
+summary: Improve your content with taxonomy
 ---
 
 Hello there! Today we will check how categorize and relate our content with Hugo Taxonomy.

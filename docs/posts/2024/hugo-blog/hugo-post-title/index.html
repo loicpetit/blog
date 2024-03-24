@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Add data in titles | Hello there!</title>
+
+      <link rel="stylesheet" href="/blog/css/main.min.73be4799b2091d293b47b52ca2642fe82aa2b1c9c050e8d1b389a80939a30dd4.css" integrity="sha256-c75HmbIJHSk7R7UsomQv6CqiscnAUOjRs4moCTmjDdQ=" crossorigin="anonymous">
+
+
+      <script src="/blog/js/main.23cd0c7d837263b9eaeb96ee2d9ccfa2969daa3fa00fa1c1fe8701a9b87251a1.js" integrity="sha256-I80MfYNyY7nq65buLZzPopadqj&#43;gD6HB/ocBqbhyUaE=" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+  <header>
+    <h1>Hello there!</h1>
+
+  <nav>
+    <ul>
+    <li>
+      <a href="/blog/">Home</a>
+    </li>
+    <li>
+      <a aria-current="true" class="ancestor" href="/blog/posts/">Posts</a>
+    </li>
+    <li>
+      <a href="/blog/series/">Series</a>
+    </li>
+    <li>
+      <a href="/blog/categories/">Categories</a>
+    </li>
+    <li>
+      <a href="/blog/tags/">Tags</a>
+    </li>
+    </ul>
+  </nav>
+
+
+  </header>
+  <main>
+    
+  <h1>Add data in titles</h1>
+
+  
+  
+  <time datetime="2024-03-23T00:00:00&#43;00:00">March 23, 2024</time>
+
+  
+  <div class="taxonomy">
+    <div class="label">Category:</div>
+    <ul>
+        <li><a href="/blog/categories/development/">Development</a></li>
+    </ul>
+  </div>
+
+  
+  <div class="taxonomy">
+    <div class="label">Tags:</div>
+    <ul>
+        <li><a href="/blog/tags/hugo/">Hugo</a></li>
+        <li><a href="/blog/tags/blog/">Blog</a></li>
+    </ul>
+  </div>
+
+  
+  <div class="taxonomy">
+    <div class="label">Serie:</div>
+    <ul>
+        <li><a href="/blog/series/hugo-blog/">Hugo blog</a></li>
+    </ul>
+  </div>
+
+
+  <p>Hello there! Today we will dig in the list template to add data in our titles.</p>
+<h2 id="first-test-it-">First, test it !</h2>
+<p>To know what you can do, just test and try to debug the available data you have.
+Here the link with the page properties : <a href="https://gohugo.io/methods/page">https://gohugo.io/methods/page</a></p>
+<p>The defalut list template is in your theme in <em>layouts/_default/list.html</em> folder.<br>
+Edit the template to display the page kind for example :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h1</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ .Content }}
+</span></span><span style="display:flex;"><span>  {{ range .Pages }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h2</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span>&gt;{{ .LinkTitle }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;&lt;<span style="color:#f92672">span</span>&gt;Kind: {{ .Kind }}&lt;/<span style="color:#f92672">span</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;{{ .Summary }}&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ end }}
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><p>The home page is not affected by that template.<br>
+The taxonomy pages (tags, categories, series) and posts page are affected, see below :<br>
+<img src="posts-title-kind.png" alt="Post titles with page kind displayed"><br>
+<img src="tags-title-kind.png" alt="Tag titles with page kind displayed"></p>
+<p>Try out other properties to see what you can get !</p>
+<h2 id="display-the-date-only-for-pages">Display the date only for pages</h2>
+<p>So to add the date for posts, I just add a new span when the kind is <em>page</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{- define &#34;main&#34; }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h1</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>  {{- .Content }}
+</span></span><span style="display:flex;"><span>  {{- range .Pages }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;list-title&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span>&gt;{{ .LinkTitle }}&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>      {{- if eq &#34;page&#34; .Kind }}
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;date&#34;</span>&gt;{{ .Date.Format &#34;2006-01-02&#34; }}&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>      {{- end }}
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>      {{ .Summary }}
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">p</span>&gt;    
+</span></span><span style="display:flex;"><span>  {{- end }}
+</span></span><span style="display:flex;"><span>{{- end }}
+</span></span></code></pre></div><p><img src="posts-with-date.png" alt="Title with date"></p>
+<p>Find details about date format here : <a href="https://gohugo.io/functions/time/format">https://gohugo.io/functions/time/format</a></p>
+<p>For taxonomy pages, I have a better idea ^_^</p>
+<h2 id="display-taxonomy-for-pages">Display taxonomy for pages</h2>
+<p>In addition of the date, what if we could see the taxonomy associated with the page to help to know what the page is about ?</p>
+<p>Between the title and the summary, let&rsquo;s add a paragraph with the page taxonomy.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{- define &#34;main&#34; }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h1</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>  {{- .Content }}
+</span></span><span style="display:flex;"><span>  {{- range .Pages }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;list-title&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span>&gt;{{ .LinkTitle }}&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>      {{- if eq &#34;page&#34; .Kind }}
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;date&#34;</span>&gt;{{ .Date.Format &#34;2006-01-02&#34; }}&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>      {{- end }}
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>    {{- if eq &#34;page&#34; .Kind }}
+</span></span><span style="display:flex;"><span>      {{- $tags := .GetTerms &#34;tags&#34; }}
+</span></span><span style="display:flex;"><span>      {{- $category := .GetTerms &#34;categories&#34; }}
+</span></span><span style="display:flex;"><span>      {{- $serie := .GetTerms &#34;series&#34; }}
+</span></span><span style="display:flex;"><span>      {{- $taxonomy := union $serie (union $category $tags) }}
+</span></span><span style="display:flex;"><span>      {{- if ($taxonomy.Len | lt 0) }}
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>          {{- range $taxonomy }}
+</span></span><span style="display:flex;"><span>            - &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span>&gt;{{ .LinkTitle }}&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>          {{- end }}
+</span></span><span style="display:flex;"><span>          -
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>      {{- end }}
+</span></span><span style="display:flex;"><span>    {{- end }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>      {{ .Summary }}
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">p</span>&gt;    
+</span></span><span style="display:flex;"><span>  {{- end }}
+</span></span><span style="display:flex;"><span>{{- end }}
+</span></span></code></pre></div><p><img src="posts-with-date-and-taxonomy.png" alt="Title with date and taxonomy"></p>
+<p>Thanks to the <em>GetTerms</em> page method, we get all the taxonmy. Then we set all the values in one list with the union function.
+Finally if there are terms, we list then inside a paragraph.</p>
+<h2 id="display-the-number-of-pages-for-terms">Display the number of pages for terms</h2>
+<p>For terms having the post date has no sense. Instead I would like to have the number of pages for that term.<br>
+I use the <em>urlize</em> function to get the taxonomy key in order to retrieve the data about the term.<br>
+The <em>index</em> function is used to get the term from the collection by its key.<br>
+Then the count is already accessible from the term, just display it next the title.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{- define &#34;main&#34; }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h1</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>  {{- .Content }}
+</span></span><span style="display:flex;"><span>  {{- range .Pages }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;list-title&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span>&gt;{{ .LinkTitle }}&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>      {{- if eq &#34;page&#34; .Kind }}
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;date&#34;</span>&gt;{{ .Date.Format &#34;2006-01-02&#34; }}&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>      {{- end }}
+</span></span><span style="display:flex;"><span>      {{- if eq &#34;term&#34; .Kind }}
+</span></span><span style="display:flex;"><span>        {{- $taxo := index site.Taxonomies ($.Title | urlize)}}
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span>&gt;({{ $taxo.Count (.Title | urlize) }})&lt;/<span style="color:#f92672">span</span>&gt;
+</span></span><span style="display:flex;"><span>      {{- end }}
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>    {{- if eq &#34;page&#34; .Kind }}
+</span></span><span style="display:flex;"><span>      {{- $tags := .GetTerms &#34;tags&#34; }}
+</span></span><span style="display:flex;"><span>      {{- $category := (.GetTerms &#34;categories&#34;).Limit 1 }}
+</span></span><span style="display:flex;"><span>      {{- $serie := (.GetTerms &#34;series&#34;).Limit 1 }}
+</span></span><span style="display:flex;"><span>      {{- $taxonomy := union $serie (union $category $tags) }}
+</span></span><span style="display:flex;"><span>      {{- if ($taxonomy.Len | lt 0) }}
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>          {{- range $taxonomy }}
+</span></span><span style="display:flex;"><span>            - &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span>&gt;{{ .LinkTitle }}&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>          {{- end }}
+</span></span><span style="display:flex;"><span>          -
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>      {{- end }}
+</span></span><span style="display:flex;"><span>    {{- end }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>      {{ .Summary }}
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">p</span>&gt;    
+</span></span><span style="display:flex;"><span>  {{- end }}
+</span></span><span style="display:flex;"><span>{{- end }}
+</span></span></code></pre></div><p><img src="terms-with-nb-pages.png" alt="term with number of post associated"></p>
+<p>See<br>
+<a href="https://gohugo.io/functions/collections/indexfunction">https://gohugo.io/functions/collections/indexfunction</a><br>
+<a href="https://gohugo.io/functions/urls/urlize">https://gohugo.io/functions/urls/urlize</a></p>
+<h2 id="home-is-not-affected">Home is not affected</h2>
+<p>Home page is not affected by the list template. For now I will let the page almost untouched, I just limit the number of results to the last 5 posts.</p>
+<p>I change the <em>layouts/_default/home.html</em> template by :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>{{ define &#34;main&#34; }}
+</span></span><span style="display:flex;"><span>  {{ .Content }}
+</span></span><span style="display:flex;"><span>  {{ range site.RegularPages.Limit 5 }}
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h2</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink }}&#34;</span>&gt;{{ .LinkTitle }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;{{ .Summary }}&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ end }}
+</span></span><span style="display:flex;"><span>{{ end }}
+</span></span></code></pre></div><p>I just added <em>.Limit 5</em> to in the range operation.</p>
+<p>I hope you learn something with that post, the next one will be about managing the translation of posts.<br>
+Stay tuned!</p>
+
+
+  </main>
+  <footer>
+    <p>Copyright 2024. All rights reserved.</p>
+
+  </footer>
+</body>
+</html>

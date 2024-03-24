@@ -8,6 +8,7 @@ tags:
 - Blog
 series: Hugo blog
 series_weight: 3
+summary: Check out how to customize the post pages with all our tags
 ---
 
 Hello there! Today we will see how customize our post pages.  

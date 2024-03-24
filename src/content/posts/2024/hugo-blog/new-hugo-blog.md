@@ -9,6 +9,7 @@ tags:
 - Blog
 series: Hugo blog
 series_weight: 1
+summary: Initiate a new blog site with Hugo !
 ---
 
 Hello there! My first posts on this blog will be how I created the blog using Hugo.  
