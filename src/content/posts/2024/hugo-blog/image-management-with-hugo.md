@@ -1,6 +1,6 @@
 ---
 title: Image management with Hugo
-date: 2024-04-20T00:00:00Z # to update !
+date: 2024-05-20T00:00:00Z # to update !
 draft: true
 categories:
 - Development

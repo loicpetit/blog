@@ -1,44 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://loicpetit.github.io/blog/posts/2024/hugo-blog/hugo-post-title/</loc>
-    <lastmod>2024-03-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://loicpetit.github.io/blog/tags/blog/</loc>
-    <lastmod>2024-03-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://loicpetit.github.io/blog/categories/</loc>
-    <lastmod>2024-03-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://loicpetit.github.io/blog/categories/development/</loc>
-    <lastmod>2024-03-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://loicpetit.github.io/blog/</loc>
-    <lastmod>2024-03-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://loicpetit.github.io/blog/tags/hugo/</loc>
-    <lastmod>2024-03-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://loicpetit.github.io/blog/series/hugo-blog/</loc>
-    <lastmod>2024-03-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://loicpetit.github.io/blog/posts/</loc>
-    <lastmod>2024-03-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://loicpetit.github.io/blog/series/</loc>
-    <lastmod>2024-03-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://loicpetit.github.io/blog/tags/</loc>
-    <lastmod>2024-03-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://loicpetit.github.io/blog/posts/2024/hugo-blog/hugo-display-category-and-serie/</loc>
-    <lastmod>2024-02-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://loicpetit.github.io/blog/posts/2024/hugo-blog/hugo-taxonomy/</loc>
-    <lastmod>2024-02-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://loicpetit.github.io/blog/posts/2024/hugo-blog/new-hugo-blog/</loc>
-    <lastmod>2024-01-07T00:00:00+00:00</lastmod>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>https://loicpetit.github.io/blog/en/sitemap.xml</loc>
+    
+      <lastmod>2024-03-23T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://loicpetit.github.io/blog/fr/sitemap.xml</loc>
+    
+  </sitemap>
+  
+</sitemapindex>

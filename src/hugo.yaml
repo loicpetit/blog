@@ -1,14 +1,16 @@
 baseURL: https://loicpetit.github.io/blog/
-languageCode: en-us
+languageCode: en
 title: Hello there!
 theme: theme
 cleanDestinationDir: true
+
+params:
+  description: Join a coder padawan in its discoveries ./
 
 taxonomies:
   category: categories
   serie: series
   tag: tags
-
 menus:
   main:
   - name: Home
@@ -26,3 +28,28 @@ menus:
   - name: Tags
     pageRef: /tags
     weight: 50
+
+languages:
+  en:
+    weight: 1
+  fr:
+    weight: 2
+    params:
+      description: Rejoins un padawan du code dans ses découvertes ./
+    menus:
+      main:
+        - name: Accueil
+          pageRef: /
+          weight: 10
+        - name: Articles
+          pageRef: /posts
+          weight: 20
+        - name: Séries
+          pageRef: /series
+          weight: 30
+        - name: Catégories
+          pageRef: /categories
+          weight: 40
+        - name: Mots clés
+          pageRef: /tags
+          weight: 50
